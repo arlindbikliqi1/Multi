@@ -22,11 +22,7 @@ jobs:
     # Copy the .env file
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-    # Install dependencies
-    - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-
+      
     # Generate the application key
     - name: Generate key
       run: php artisan key:generate
