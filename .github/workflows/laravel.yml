@@ -20,4 +20,4 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh -o StrictHostKeyChecking=no root@23.88.98.228 "cd /var/www/Multi/laravel-Multipage && git pull && composer install && php artisan migrate"
+            ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no root@23.88.98.228 "cd /var/www/Multi/laravel-Multipage && git pull && composer install && php artisan migrate"
